@@ -1,12 +1,12 @@
-# WebRTC Real-time Object Detection System
+﻿# WebRTC Real-time Object Detection System
 
 A production-ready system for real-time multi-object detection on live video streams from mobile phones via WebRTC. Features dual-mode inference (client-side WASM or server-side processing), advanced performance metrics, smart frame queue management with backpressure handling, and automatic ngrok tunneling with QR code generation.
 
-## 🎥 Demo Video
+## ðŸŽ¥ Demo Video
 
-**[1-minute Loom Demo](https://www.loom.com/share/fdaaac33b68b4500beb41001ed27a4f3?sid=71473479-5561-4519-866d-cbb494cf72f3)** - Shows live phone → browser detection with comprehensive metrics
+**[1-minute Loom Demo](https://www.loom.com/share/fdaaac33b68b4500beb41001ed27a4f3?sid=71473479-5561-4519-866d-cbb494cf72f3)** - Shows live phone â†’ browser detection with comprehensive metrics
 
-🚀 Quick Start
+ðŸš€ Quick Start
 Prerequisites
 Before you begin, please ensure you have the following software installed and running on your local machine:
 
@@ -23,7 +23,7 @@ One-Command Setup use gitbash:
 Once the prerequisites are met, you can get the project running with these commands:
 ```bash
 # 1. Clone the repository
-git clone https://github.com/sagarrajak245/Real-time-WebRTC-VLM-Multi-Object-Detection.git
+git clone https://github.com/Jeetzala1/Real-time-WebRTC-VLM-Multi-Object-Detection.git
 
 # 2. Navigate into the project directory
 cd Real-time-WebRTC-VLM-Multi-Object-Detection
@@ -63,11 +63,11 @@ Emitted 'error' event on Server instance at:
   port: 3000
 }
 
-Let’s make it **2 simple steps** so you can quickly identify and kill whatever is running on port `3000`.
+Letâ€™s make it **2 simple steps** so you can quickly identify and kill whatever is running on port `3000`.
 
 ---
 
-### 🔹 Step 1: Identify the process
+### ðŸ”¹ Step 1: Identify the process
 
 Run this in PowerShell or CMD:
 
@@ -75,11 +75,11 @@ Run this in PowerShell or CMD:
 netstat -ano | findstr :3000
 ```
 
-👉 This shows the PID (last column) of the process using port `3000`.
+ðŸ‘‰ This shows the PID (last column) of the process using port `3000`.
 
 ---
 
-### 🔹 Step 2: Kill the process
+### ðŸ”¹ Step 2: Kill the process
 
 Use the PID from Step 1:
 
@@ -95,21 +95,21 @@ taskkill /PID 14204 /F
 ```
 
 The system automatically:
-- ✅ Builds and starts Docker containers
-- ✅ It gives u localhost 3000 port URL to run Dispaly of server in browser ui
-- ✅ Also u can open ur phone url in local pc itself to test detection 
-- ✅ Exposes public URL via ngrok only currently fails when tries to expose ngrok tunnel inside container
-- ✅ Generates public URL and code in terminal AND browser when ngrok is installed locally .
-- ✅ Else Displays simple url for  *browser:*  (http://localhost:3000)   For *Phone:*(http://localhost:3000/phone) u can open them both on different tab
-- ✅ Displays connection instructions
+- âœ… Builds and starts Docker containers
+- âœ… It gives u localhost 3000 port URL to run Dispaly of server in browser ui
+- âœ… Also u can open ur phone url in local pc itself to test detection 
+- âœ… Exposes public URL via ngrok only currently fails when tries to expose ngrok tunnel inside container
+- âœ… Generates public URL and code in terminal AND browser when ngrok is installed locally .
+- âœ… Else Displays simple url for  *browser:*  (http://localhost:3000)   For *Phone:*(http://localhost:3000/phone) u can open them both on different tab
+- âœ… Displays connection instructions
 
 Open `http://localhost:3000` on your laptop, scan the QR code on terminal with your phone, or use public url generated bt nggrok and start detecting objects in real-time.
 
-## 📦 Model Setup if you dont have models:
+## ðŸ“¦ Model Setup if you dont have models:
 
 This project requires YOLO models for object detection. If you don't have the models locally, you can easily download them using our automated script.
 
-### 🚀 Quick Model Download
+### ðŸš€ Quick Model Download
 
 We provide a bash script that automatically downloads and sets up both YOLOv5n and YOLOv8n models in the correct directories.
 
@@ -131,30 +131,30 @@ We provide a bash script that automatically downloads and sets up both YOLOv5n a
    ```
 
 3. **Wait for completion** - The script will:
-   - 📁 Create `public/models/` and `server/models/` directories
-   - ⬇️ Download YOLOv5n model (~6MB)
-   - ⬇️ Download YOLOv8n model (~6MB)
-   - 📋 Copy models to both required locations
-   - ✅ Verify successful downloads
+   - ðŸ“ Create `public/models/` and `server/models/` directories
+   - â¬‡ï¸ Download YOLOv5n model (~6MB)
+   - â¬‡ï¸ Download YOLOv8n model (~6MB)
+   - ðŸ“‹ Copy models to both required locations
+   - âœ… Verify successful downloads
 
 
 
-### 📁 Expected File Structure
+### ðŸ“ Expected File Structure
 After running the script, you should have:
 ```
 webrtc-detection/
-├── public/
-│   └── models/
-│       ├── yolov5n.onnx
-│       └── yolov8n.onnx
-├── server/
-│   └── models/
-│       ├── yolov5n.onnx
-│       └── yolov8n.onnx
-└── download_models.sh
+â”œâ”€â”€ public/
+â”‚   â””â”€â”€ models/
+â”‚       â”œâ”€â”€ yolov5n.onnx
+â”‚       â””â”€â”€ yolov8n.onnx
+â”œâ”€â”€ server/
+â”‚   â””â”€â”€ models/
+â”‚       â”œâ”€â”€ yolov5n.onnx
+â”‚       â””â”€â”€ yolov8n.onnx
+â””â”€â”€ download_models.sh
 ```
 
-### 🔧 Troubleshooting
+### ðŸ”§ Troubleshooting
 
 **If download fails:**
 1. Check your internet connection
@@ -477,36 +477,36 @@ This will start both your development server and ngrok tunnel simultaneously.
 
 **Note**: Replace `3000` with your actual port number and `YOUR_AUTHTOKEN_HERE` with your actual ngrok authtoken.
 
-## 🏗️ System Architecture
+## ðŸ—ï¸ System Architecture
 
 ### Dual-Mode Processing Architecture
 
 ```mermaid
 graph TB
-    Phone[📱 Phone Camera] --> WebRTC[WebRTC Stream]
-    WebRTC --> Browser[🖥️ Browser Display]
+    Phone[ðŸ“± Phone Camera] --> WebRTC[WebRTC Stream]
+    WebRTC --> Browser[ðŸ–¥ï¸ Browser Display]
     
     subgraph "Processing Modes"
-        WASM[🔧 WASM Mode<br/>YOLOv5n Client-side]
-        Server[⚡ Server Mode<br/>YOLOv8n Server-side]
+        WASM[ðŸ”§ WASM Mode<br/>YOLOv5n Client-side]
+        Server[âš¡ Server Mode<br/>YOLOv8n Server-side]
     end
     
     Browser --> WASM
     Browser --> Server
     
-    WASM --> Overlay[🎯 Detection Overlays]
+    WASM --> Overlay[ðŸŽ¯ Detection Overlays]
     Server --> Overlay
 ```
 
 ### **WASM Mode** (Default - Client-side)
-- **Model**: YOLOv5n quantized ONNX (5MB, 320×320 output)
+- **Model**: YOLOv5n quantized ONNX (5MB, 320Ã—320 output)
 - **Runtime**: ONNX Runtime Web with WASM backend
 - **Processing**: Browser-side inference using Web Workers
 - **Advantages**: Privacy-preserving, reduced server load, lower network latency
 - **Trade-offs**: Higher client resource usage, device-dependent performance
 
 ### **Server Mode** (Server-side)
-- **Model**: YOLOv8n ONNX (6MB, 320×320 output)
+- **Model**: YOLOv8n ONNX (6MB, 320Ã—320 output)
 - **Runtime**: ONNX Runtime Node.js
 - **Processing**: Centralized inference with smart queue management
 - **Advantages**: Consistent performance, centralized optimization
@@ -514,13 +514,13 @@ graph TB
 
 ### Key Components
 
-- **WebRTC Pipeline**: Phone camera → WebRTC → Browser display with overlays
+- **WebRTC Pipeline**: Phone camera â†’ WebRTC â†’ Browser display with overlays
 - **Smart Frame Processor**: Advanced queue management with backpressure (server mode)
 - **Bandwidth Monitor**: Real-time WebRTC connection quality tracking
 - **ngrok Integration**: Automatic public URL generation with QR codes
 - **Benchmark Suite**: Comprehensive performance analysis with 30+ metrics
 
-## 📊 Performance Metrics
+## ðŸ“Š Performance Metrics
 
 ### WASM Mode (Client-side YOLOv5n)
 ```json
@@ -579,14 +579,14 @@ graph TB
 
 | Metric | WASM Mode | Server Mode | Analysis |
 |--------|-----------|-------------|----------|
-| **Processing FPS** | 18.7 | 7.5 | WASM achieves 2.5× higher throughput |
+| **Processing FPS** | 18.7 | 7.5 | WASM achieves 2.5Ã— higher throughput |
 | **Median Latency** | 83ms | 74ms | Server mode has 11% lower latency |
 | **P95 Latency** | 193ms | 109ms | Server mode has 44% better P95 performance |
 | **Detection Rate** | 100% | 100% | Both modes achieve perfect detection coverage |
 | **Network Usage** | 1.96 Mbps | Variable | WASM primarily downlink, server bidirectional |
 | **Resource Location** | Client | Server | Different computational distribution strategies |
 
-## 📱 Phone Connection Instructions
+## ðŸ“± Phone Connection Instructions
 
 ### Method 1: Automatic QR Code (Recommended)
 
@@ -595,9 +595,9 @@ The system generates QR codes in **both locations**:
 1. **Terminal QR Code**: Displayed when running `./start.sh`
 ```bash
 ./start.sh wasm
-# ✅ Application started. Waiting for ngrok QR code...
+# âœ… Application started. Waiting for ngrok QR code...
 # QRCode: [ASCII QR CODE DISPLAYED HERE]
-# 📱 Scan the QR code above with your phone to connect.
+# ðŸ“± Scan the QR code above with your phone to connect.
 ```
 
 2. **Browser QR Code**: Available at `http://localhost:3000`
@@ -627,7 +627,7 @@ ip addr show | grep inet
 - **iOS**: Safari (latest), Chrome  
 - **Requirements**: WebRTC support, camera access
 
-## 🛠️ Custom Model Training (320×320 Output)
+## ðŸ› ï¸ Custom Model Training (320Ã—320 Output)
 
 ### YOLOv5 Model Customization
 ```python
@@ -671,12 +671,12 @@ model.export(format='onnx', imgsz=320)
 Place your trained models in:
 ```
 models/
-├── yolov5n_320.onnx    # WASM mode
-├── yolov8n_320.onnx    # Server mode
-└── model_config.json   # Model metadata
+â”œâ”€â”€ yolov5n_320.onnx    # WASM mode
+â”œâ”€â”€ yolov8n_320.onnx    # Server mode
+â””â”€â”€ model_config.json   # Model metadata
 ```
 
-## 🔧 Benchmarking
+## ðŸ”§ Benchmarking
 
 ### Quick Benchmark
 ```bash
@@ -695,12 +695,12 @@ models/
 ### Automated Benchmark Process
 
 The `run_bench.sh` script automatically:
-1. ✅ Builds and starts Docker containers
-2. ✅ Waits for service initialization (15 seconds)
-3. ✅ Triggers benchmark via API call
-4. ✅ Collects metrics during specified duration
-5. ✅ Saves results to `bench/metrics.json`
-6. ✅ Cleanly stops all services
+1. âœ… Builds and starts Docker containers
+2. âœ… Waits for service initialization (15 seconds)
+3. âœ… Triggers benchmark via API call
+4. âœ… Collects metrics during specified duration
+5. âœ… Saves results to `bench/metrics.json`
+6. âœ… Cleanly stops all services
 
 ### Benchmark Output Structure
 ```json
@@ -728,12 +728,12 @@ The `run_bench.sh` script automatically:
 }
 ```
 
-## 🎯 Low-Resource Mode Features
+## ðŸŽ¯ Low-Resource Mode Features
 
 ### Adaptive Processing Optimizations
 
-**Input Resolution**: 320×320 pixels (75% reduction from default 640×640)
-- Memory impact: 307KB per frame (vs 2.4MB for 640×640)
+**Input Resolution**: 320Ã—320 pixels (75% reduction from default 640Ã—640)
+- Memory impact: 307KB per frame (vs 2.4MB for 640Ã—640)
 - Processing reduction: 75% computational load decrease
 - Quality retention: Optimized for mobile object detection
 
@@ -796,7 +796,7 @@ resources:
 - iOS: Safari 13+, iPhone 7/iPad 2018 or newer
 - Network: 2 Mbps uplink for 320p video streaming
 
-## ⚙️ Configuration Options
+## âš™ï¸ Configuration Options
 
 ### Environment Variables
 ```bash
@@ -907,7 +907,7 @@ npm run dev
 PORT=8080 ./start.sh
 ```
 
-## 🔍 Advanced Features
+## ðŸ” Advanced Features
 
 ### Real-time Metrics Dashboard
 
@@ -960,7 +960,7 @@ class WebRTCStatsMonitor {
 }
 ```
 
-## 📡 API Reference
+## ðŸ“¡ API Reference
 
 ### Detection Results Format
 ```javascript
@@ -1013,7 +1013,7 @@ class WebRTCStatsMonitor {
 - `POST /api/config/mode` - Switch processing mode
 - `GET /api/models/info` - Model information and capabilities
 
-## 🐳 Docker Configuration
+## ðŸ³ Docker Configuration
 
 ### Production Deployment
 ```dockerfile
@@ -1058,11 +1058,11 @@ services:
       - MODE=wasm
     command: npm run dev
 ```
-# 🧪 Troubleshooting Guide
+# ðŸ§ª Troubleshooting Guide
 
 This guide covers common issues that may arise during setup and operation of the WebRTC Detection Service.
 
-## 📱 Phone Cannot Connect to PC
+## ðŸ“± Phone Cannot Connect to PC
 
 **The most common issue** - typically caused by network restrictions that prevent the phone and PC from communicating directly.
 
@@ -1109,7 +1109,7 @@ If running locally with `npm run start` and ngrok fails:
 
 ---
 
-## 🔥 High CPU Usage or Slow Performance
+## ðŸ”¥ High CPU Usage or Slow Performance
 
 **Symptom:** Low FPS, high latency, loud fan, and generally unresponsive system.
 
@@ -1132,7 +1132,7 @@ docker stats webrtc_detection_service
 
 ---
 
-## 📡 Video Stream is Laggy or Delayed
+## ðŸ“¡ Video Stream is Laggy or Delayed
 
 **Symptom:** Noticeable delay between movement on phone and corresponding action on PC screen.
 
@@ -1158,7 +1158,7 @@ docker stats webrtc_detection_service
 
 ---
 
-## 🎯 Detection Overlays are Misaligned
+## ðŸŽ¯ Detection Overlays are Misaligned
 
 **Symptom:** Green bounding boxes don't correctly line up with objects in the video stream.
 
@@ -1172,7 +1172,7 @@ docker stats webrtc_detection_service
 
 ---
 
-## 🚨 Emergency Troubleshooting
+## ðŸš¨ Emergency Troubleshooting
 
 ### Quick Reset
 ```bash
@@ -1196,7 +1196,7 @@ Enable debug mode in the web interface for detailed diagnostic information.
 
 ---
 
-## 💡 Tips for Best Performance
+## ðŸ’¡ Tips for Best Performance
 
 - **Use a home Wi-Fi network** whenever possible
 - **Start with WASM mode** for lower resource usage
@@ -1206,7 +1206,7 @@ Enable debug mode in the web interface for detailed diagnostic information.
 
 ---
 
-## 🆘 Still Need Help?
+## ðŸ†˜ Still Need Help?
 
 If you're still experiencing issues:
 
@@ -1256,20 +1256,20 @@ ifstat -i wlan0
 # Navigate to chrome://webrtc-internals
 ```
 
-## 📈 Model Information
+## ðŸ“ˆ Model Information
 
-### WASM Mode: YOLOv5n (320×320)
+### WASM Mode: YOLOv5n (320Ã—320)
 - **Architecture**: YOLOv5 nano optimized for web deployment
 - **Model Size**: ~5MB quantized ONNX
-- **Input Resolution**: 320×320×3 (optimized from 640×640)
+- **Input Resolution**: 320Ã—320Ã—3 (optimized from 640Ã—640)
 - **Output Classes**: 80 COCO object classes
 - **Performance**: ~18.7 FPS on modern devices
 - **Optimization**: INT8 quantization for faster inference
 
-### Server Mode: YOLOv8n (320×320)  
+### Server Mode: YOLOv8n (320Ã—320)  
 - **Architecture**: YOLOv8 nano with enhanced accuracy
 - **Model Size**: ~6MB ONNX format
-- **Input Resolution**: 320×320×3 (custom trained)
+- **Input Resolution**: 320Ã—320Ã—3 (custom trained)
 - **Output Classes**: 80 COCO object classes  
 - **Performance**: ~7.5 FPS with queue management
 - **Features**: Advanced post-processing and NMS
@@ -1295,7 +1295,7 @@ Both models output detections in consistent format:
 }
 ```
 
-## 🤝 Contributing
+## ðŸ¤ Contributing
 
 ### Development Setup
 ```bash
@@ -1318,38 +1318,38 @@ npm run build
 ### project structure:
 ```
 webrtc-detection/
-├── bench/
-│   └── run_bench.sh
-├── client/
-│   ├── app.js
-│   ├── index.html
-│   ├── phone.html
-│   ├── wasm-inference.js
-│   ├── WebRTCStatsMonitor.js
-│   └── logs/
-├── model-train/
-│   ├── size.py
-│   ├── train.py
-│   ├── yolov8n-int8.onnx
-│   └── yolov8n.onnx
-├── node_modules/
-├── public/
-├── server/
-│   ├── models/
-│   ├── Frameprocessor.js
-│   ├── index.js
-│   └── inference.js
-├── .env
-├── .gitignore
-├── docker-compose.yml
-├── Dockerfile
-├── download-yolov8.sh
-├── package-lock.json
-├── package.json
-├── start.sh
-├── TEST-CHECKLIST.md
-└── README.md
-## 🔒 Security and Privacy
+â”œâ”€â”€ bench/
+â”‚   â””â”€â”€ run_bench.sh
+â”œâ”€â”€ client/
+â”‚   â”œâ”€â”€ app.js
+â”‚   â”œâ”€â”€ index.html
+â”‚   â”œâ”€â”€ phone.html
+â”‚   â”œâ”€â”€ wasm-inference.js
+â”‚   â”œâ”€â”€ WebRTCStatsMonitor.js
+â”‚   â””â”€â”€ logs/
+â”œâ”€â”€ model-train/
+â”‚   â”œâ”€â”€ size.py
+â”‚   â”œâ”€â”€ train.py
+â”‚   â”œâ”€â”€ yolov8n-int8.onnx
+â”‚   â””â”€â”€ yolov8n.onnx
+â”œâ”€â”€ node_modules/
+â”œâ”€â”€ public/
+â”œâ”€â”€ server/
+â”‚   â”œâ”€â”€ models/
+â”‚   â”œâ”€â”€ Frameprocessor.js
+â”‚   â”œâ”€â”€ index.js
+â”‚   â””â”€â”€ inference.js
+â”œâ”€â”€ .env
+â”œâ”€â”€ .gitignore
+â”œâ”€â”€ docker-compose.yml
+â”œâ”€â”€ Dockerfile
+â”œâ”€â”€ download-yolov8.sh
+â”œâ”€â”€ package-lock.json
+â”œâ”€â”€ package.json
+â”œâ”€â”€ start.sh
+â”œâ”€â”€ TEST-CHECKLIST.md
+â””â”€â”€ README.md
+## ðŸ”’ Security and Privacy
 
 ### Data Protection
 - **Client-side Processing**: WASM mode keeps video data on device
@@ -1373,7 +1373,7 @@ const corsOptions = {
 };
 ```
 
-## 📊 Monitoring and Observability
+## ðŸ“Š Monitoring and Observability
 
 ### Performance Metrics Collection
 The system automatically collects and analyzes:
@@ -1404,7 +1404,7 @@ DURATION=60 MODE=wasm ./bench/run_bench.sh
 
 Results include detailed performance analysis and bottleneck identification.
 
-## 🚧 Known Limitations and Future Improvements
+## ðŸš§ Known Limitations and Future Improvements
 
 ### Current Limitations
 1. **Browser Compatibility**: iOS Safari has limited WebRTC feature parity
@@ -1438,11 +1438,11 @@ Results include detailed performance analysis and bottleneck identification.
 ### Next Development Sprint
 **Adaptive Network Management**: Implement intelligent bitrate and frame rate adaptation based on real-time network quality metrics to maintain optimal performance across varying network conditions while preserving detection accuracy.
 
-## 📄 License
+## ðŸ“„ License
 
 MIT License - see LICENSE file for details.
 
-## 🆘 Technical Support
+## ðŸ†˜ Technical Support
 
 For issues, questions, or contributions:
 
@@ -1461,16 +1461,16 @@ For issues, questions, or contributions:
 
 ---
 
-## ✨ Key Success Metrics
+## âœ¨ Key Success Metrics
 
 The system demonstrates production-ready performance:
 
-- ✅ **Real-time Performance**: <200ms P95 latency across both modes
-- ✅ **High Throughput**: 7.5-18.7 FPS processing rate depending on mode  
-- ✅ **Perfect Detection Coverage**: 100% frame detection rate
-- ✅ **Resource Efficiency**: <10% queue utilization, zero frame drops
-- ✅ **Network Optimization**: Intelligent bandwidth usage (1-4 Mbps)
-- ✅ **Automated Deployment**: One-command setup with ngrok integration
-- ✅ **Comprehensive Monitoring**: 30+ performance metrics with real-time analysis
+- âœ… **Real-time Performance**: <200ms P95 latency across both modes
+- âœ… **High Throughput**: 7.5-18.7 FPS processing rate depending on mode  
+- âœ… **Perfect Detection Coverage**: 100% frame detection rate
+- âœ… **Resource Efficiency**: <10% queue utilization, zero frame drops
+- âœ… **Network Optimization**: Intelligent bandwidth usage (1-4 Mbps)
+- âœ… **Automated Deployment**: One-command setup with ngrok integration
+- âœ… **Comprehensive Monitoring**: 30+ performance metrics with real-time analysis
 
 **Ready for production deployment with clear scaling and enhancement pathways.** 
